@@ -27,6 +27,7 @@ export function aufgabe02(args) {
  
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+
     //Wandle das aktuelle Element in einen Grossbuchstaben um
     const capitalizedElement = currentElement.toUpperCase()
    
@@ -59,20 +60,41 @@ export function aufgabe03(args) {
 export function aufgabe04(args) {
   const input = args
   const result = []
-  let count = 0
+  let count = 1
  
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === 'word') {
+    if (currentElement === ' ') {
       count++
-    } else if ( currentElement === 'word') {
-      count++
- 
-  }
- 
+    }
+ //ähnlich wie Aufgabe 3 es sollte anstatt e s wörter zählen
   }
   return count
 }
+
+export function aufgabe05(args) {
+  const input = args
+  const result = []
+ 
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    //ähnlich wie aufgabe 2, die aufgabe soll grossbuchstaben enthalten
+    const capitalizedElement = currentElement.toUpperCase()
+   
+    if (currentElement === ".") {
+
+    } else if (currentElement === " ") {
+
+    } else if ( currentElement === capitalizedElement) {
+      return true
+    }
+   
+ 
+  }
+  return false
+}
+
+
 
 export function aufgabe08(args) {
   const input = args
@@ -92,3 +114,4 @@ export function aufgabe08(args) {
 }
   return result.join("")
 }
+//currentElement ist der Buchstabe der gerade an dr "Reihe" ist also das Jetzige element durch resent push zeigt man dem computer durch was er das jetzige element ersetzten soll. (Aufgabe 8 ähnelt Aufgabe 1)
