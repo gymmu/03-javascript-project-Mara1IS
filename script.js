@@ -208,4 +208,118 @@ export function aufgabe08(args) {
   }
 
 
+  export function aufgabe14 (args) {
+    const input = args
+    const result = []
+    
+    return result.join("")
+  }
 
+
+export function aufgabe15 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+
+
+export function aufgabe16 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+
+export function aufgabe17(args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+
+export function aufgabe18 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+
+export function aufgabe19 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+
+
+export function aufgabe20 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+export function aufgabe21 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+
+export function aufgabe22 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+
+export function aufgabe23 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+export function aufgabe24 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+
+export function aufgabe25 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+export function aufgabe26 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+export function aufgabe27 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
+
+export function aufgabe28 (args) {
+  const input = args
+  const result = []
+  
+  return result.join("")
+}
