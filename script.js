@@ -200,20 +200,45 @@ export function aufgabe08(args) {
   }
   
 
-  export function audgabe13 (args) {
+  export function aufgabe13 (args) {
     const input = args
     const result = []
+    
+    
+    for (let i = 1; i < input.length; i++) {
+      const currentElement = input[i]
+      
+    if (currentElement === "e"){
+  return i
+}
+    }
+    return -1
+  }
+
+// ähnlich wie aufgabe 9 und 12
+
+ 
+export function aufgabe14 (args) {
+    const input = args
+    const result = []
+    
+
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      if (currentElement === "e") {
+        count++
+      } else if (currentElement === "E") {}
+   
     
     return result.join("")
   }
 
+//aufgabe 3 & 11
+let count = input
+}
+ 
+ 
 
-  export function aufgabe14 (args) {
-    const input = args
-    const result = []
-    
-    return result.join("")
-  }
 
 
 export function aufgabe15 (args) {
