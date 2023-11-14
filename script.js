@@ -98,6 +98,8 @@ export function aufgabe05(args) {
 export function aufgabe06 (args) {
   const input = args
   const result = []
+
+
   
   return result.join("")
 }
@@ -244,6 +246,8 @@ let count = input
 export function aufgabe15 (args) {
   const input = args
   const result = []
+
+  
   
   return result.join("")
 }
