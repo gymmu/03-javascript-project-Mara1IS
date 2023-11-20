@@ -75,21 +75,18 @@ export function aufgabe04(args) {
 export function aufgabe05(args) {
   const input = args
   const result = []
- 
+  let capitalLetters = 0
+
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     //ähnlich wie aufgabe 2, die aufgabe soll grossbuchstaben enthalten
-    const capitalizedElement = currentElement.toUpperCase()
+    const ascii = currentElement.charCodeAt(0)
    
-    if (currentElement === ".") {
-
-    } else if (currentElement === " ") {
-
-    } else if ( currentElement === capitalizedElement) {
+    if (65 <= ascii && ascii <= 90) {
       return true
-    }
-   
- 
+
+    } 
   }
   return false
 }
@@ -109,9 +106,22 @@ export function aufgabe06 (args) {
 export function  aufgabe07 (args) {
   const input = args
   const result = []
-  
-  return result.join("")
+
+  for(let i =0; i < input.length; i++) {
+    const currentElement = input[i] 
+
+    if (currentElement === "u") {
+      if (input[i+1] === "n")  {
+      if (input[i+2] === "d") {
+       return true
+      }
+
+    }
+  }
 }
+return false
+}
+// ähnlich wie Aufgabe 20
 
 
 
@@ -159,9 +169,24 @@ export function aufgabe08(args) {
 
  export function aufgabe10 (args) {
   const input = args
-  const result = []
-  
-  return result.join("")
+  if (input.length !== 7) return false
+  if (input[0] !== "#" ) return false
+
+  for (let i = 1; i < input.length; i++) {
+    const currentElement = input [i]
+    const ascii = currentElement.charCodeAt (0)
+    if (48 <= ascii && ascii <= 57){
+      // mache nichts ; ist eine Zahl
+
+    } else if (65 <= ascii && ascii <= 70) {
+      // mache nichts ; ist A-F
+    } else {
+      return false
+    }
+
+  }
+
+  return true
 
 }
 
@@ -222,22 +247,27 @@ export function aufgabe08(args) {
  
 export function aufgabe14 (args) {
     const input = args
-    const result = []
+    const result = 0
+    let count = 0
     
-
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
-      if (currentElement === "e") {
-        count++
-      } else if (currentElement === "E") {}
-   
-    
-    return result.join("")
-  }
+      
+      if (currentElement === "e" ) {
+       count++
+       if (count === 3) {
+        return i
+       }
 
-//aufgabe 3 & 11
+      }
+    }
+    return -1
+  }
+    
+
+//aufgabe 3 & 12 bei 3 zählt man die es und bei 12 sucht man die Position zusammen kann man die das dritte 3 zählen
 let count = input
-}
+
  
  
 
@@ -281,6 +311,8 @@ export function aufgabe18 (args) {
 export function aufgabe19 (args) {
   const input = args
   const result = []
+
+
   
   return result.join("")
 }
@@ -290,9 +322,23 @@ export function aufgabe19 (args) {
 export function aufgabe20 (args) {
   const input = args
   const result = []
+
+
+  for(let i =0; i < input.length; i++) {
+    const currentElement = input[i] 
+
+    if (currentElement === ".") {
+      if (input[i+1] === " ")  {
+        return true
+      }
+
+    }
   
-  return result.join("")
 }
+  return false
+}
+//ähnlich wie 7 einfach mit "." statt "und"
+
 
 export function aufgabe21 (args) {
   const input = args
