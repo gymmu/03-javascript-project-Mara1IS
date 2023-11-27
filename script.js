@@ -68,11 +68,11 @@ export function aufgabe04(args) {
       count++
     }
  //ähnlich wie Aufgabe 3 es sollte anstatt e s wörter zählen
-  }
+ 
+}
   return count
 }
-//wir wissen nocht nicht wie man sonderzeichen macht
-
+// letzter test mit ascii
 
 
 export function aufgabe05(args) {
@@ -138,7 +138,7 @@ export function  aufgabe07 (args) {
 }
 return false
 }
-// ähnlich wie Aufgabe 20
+// ähnlich wie Aufgabe 20 letzter Test auch falsch
 
 
 
@@ -334,7 +334,7 @@ return [
   result2.join("")
   ]
 }
-// àhnlich wie aufgabe 15, man braucht noch eine liste (Aufgabe ist richtig aber Test ist Falsch)
+// ähnlich wie aufgabe 15, man braucht noch eine liste (Aufgabe ist richtig aber Test ist Falsch)
 
 
 export function aufgabe17(args) {
@@ -357,7 +357,11 @@ export function aufgabe19 (args) {
   const input = args
   const result = []
 
-
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input [i]
+    result.push(currentElement)
+    result.push(currentElement)
+  }
   
   return result.join("")
 }
@@ -432,10 +436,22 @@ export function aufgabe26 (args) {
 
 export function aufgabe27 (args) {
   const input = args
-  const result = []
-  
-  return result.join("")
+  if (input.length === 0) return false
+ 
+ 
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt (0)
+    if(48 <= ascii && ascii <= 57) {
+      // mache nichts; ist eine Zahl
+    } else {
+      return false
+    }
+ 
+  }
+  return true
 }
+
 
 export function aufgabe28 (args) {
   const input = args
