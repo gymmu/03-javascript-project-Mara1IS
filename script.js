@@ -71,6 +71,9 @@ export function aufgabe04(args) {
   }
   return count
 }
+//wir wissen nocht nicht wie man sonderzeichen macht
+
+
 
 export function aufgabe05(args) {
   const input = args
@@ -96,11 +99,25 @@ export function aufgabe06 (args) {
   const input = args
   const result = []
 
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
 
+const asciiCode = currentElement.charCodeAt (0)
+   
+ if (
+  (asciiCode <= 31 || asciiCode >= 33 && asciiCode <= 64
+    || asciiCode >= 91 && asciiCode <= 96 || asciiCode >= 123)
+) {
+return true
+}
+
+  }
+  
   
   return result.join("")
 }
-
+// ähnlich wie aufgabe 10 und 5
 
 
 export function  aufgabe07 (args) {
