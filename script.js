@@ -276,20 +276,48 @@ let count = input
 export function aufgabe15 (args) {
   const input = args
   const result = []
-
   
-  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+ 
+    if (currentElement === ' ') {
+      return result.join("")
+      
+    } 
+    result.push(currentElement)
+}
   return result.join("")
 }
-
+// aufgabe 1 und 8 Aufgabe ist richtig aber letzter test falsch
 
 
 export function aufgabe16 (args) {
   const input = args
   const result = []
-  
-  return result.join("")
+  const result2 = []
+  let firstPart = true
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+ 
+    if (currentElement === '$') {
+      firstPart = false
+      continue
+    } 
+
+    if (firstPart === true) {
+      result.push(currentElement)
+    } else {
+      result2.push(currentElement)
+    }
+   
+  }
+return [
+  result.join(""),
+  result2.join("")
+  ]
 }
+// àhnlich wie aufgabe 15, man braucht noch eine liste (Aufgabe ist richtig aber Test ist Falsch)
 
 
 export function aufgabe17(args) {
