@@ -492,9 +492,6 @@ export function aufgabe26 (args) {
 
 
 
-
-
-
 export function aufgabe27 (args) {
   const input = args
   if (input.length === 0) return false
@@ -552,8 +549,9 @@ export function bubbleSort (args) {
     }
   }
   const result = list.join("")
-  return (result)
+  return result
 
 
 }
 
+// die ersten Buchstaben sind nicht richtig sortiert
