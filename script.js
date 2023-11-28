@@ -343,8 +343,8 @@ export function aufgabe17(args) {
   let currentPhrase = []
   let first = true 
 
-  for (let i = 0; i < text.length; i++) {
-    const currentElement = text[i]
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
 
     if (currentElement === ',' && first === true) {
       // Wenn wir hier sind haben wir einen ',' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
@@ -358,8 +358,8 @@ export function aufgabe17(args) {
       currentPhrase.push(currentElement)
     }
   }
-  phrases.push(currentPhrase.join(""))
-  return phrases
+  result.push(currentPhrase.join(""))
+  return result
 //der Text kommt von aussen wegen dem args, man bracht keinen Text in der Aufgabe
 }
 // ähnlich wie aufgabe 16
@@ -373,8 +373,8 @@ export function aufgabe18 (args) {
   const result = []
   
   let currentPhrase = []
-  for (let i = 0; i < text.length; i++) {
-    const currentElement = text[i]
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
     if (currentElement === '.') {
       // Wenn wir hier sind haben wir einen '.' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
       phrases.push(currentPhrase.join(""))
@@ -465,11 +465,10 @@ export function aufgabe25 (args) {
 }
 
 export function aufgabe26 (args) {
-  const input = args
-  const result = []
   
-
     const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+    // args anstatt text, weil wir keinen Text in der Aufgabe haben sondern der Text von aussen kommt desshalb auch kein const text
+    
     for (let i = 0; i < list.length - 1; i++) {
       const currentElement = list[i]
       const nextElement = list[i+1]
@@ -481,10 +480,15 @@ export function aufgabe26 (args) {
         i = 0 // starte von vorne wenn etwas vertauscht wurde.
       }
     }
-    result = list.join("")
-    return (result)
-  return result.join("")
-}
+    const result = list.join("")
+    return result
+  }
+
+
+
+
+
+
 
 export function aufgabe27 (args) {
   const input = args
