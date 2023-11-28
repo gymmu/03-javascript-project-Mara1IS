@@ -370,12 +370,12 @@ export function aufgabe17(args) {
 
 export function aufgabe18 (args) {
   const input = args
-  const result = []
+  const phrases = []
   
   let currentPhrase = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === '.') {
+    if (currentElement === ' ') {
       // Wenn wir hier sind haben wir einen '.' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
       phrases.push(currentPhrase.join(""))
       currentPhrase = []  // Damit löschen wir alles was im aktuellen Satz drin war.
@@ -384,11 +384,16 @@ export function aufgabe18 (args) {
       currentPhrase.push(currentElement)
     }
   }
-  return phrases 
 
-  return result.join("")
+  phrases.push(currentPhrase.join(""))
+  return "Sie heissen " + phrases[0] + " und sind " + phrases[1] + " Jahre alt"
+
+  
 }
 //ähmlich wie Aufgabe 17
+// letzte 2 Test zu schwer weil es spezial Fälle gibt.
+
+
 
 export function aufgabe19 (args) {
   const input = args
