@@ -138,7 +138,7 @@ export function  aufgabe07 (args) {
 }
 return false
 }
-// ähnlich wie Aufgabe 20 letzter Test auch falsch
+// ähnlich wie Aufgabe 20 letzter Test ist falsch
 
 
 
@@ -468,6 +468,21 @@ export function aufgabe26 (args) {
   const input = args
   const result = []
   
+
+    const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+    for (let i = 0; i < list.length - 1; i++) {
+      const currentElement = list[i]
+      const nextElement = list[i+1]
+      if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+        // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
+        const tmp = list[i+1]
+        list[i+1] = list[i]
+        list[i] = tmp
+        i = 0 // starte von vorne wenn etwas vertauscht wurde.
+      }
+    }
+    result = list.join("")
+    return (result)
   return result.join("")
 }
 
@@ -496,3 +511,40 @@ export function aufgabe28 (args) {
   
   return result.join("")
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Bubble sort
+
+
+
+export function bubbleSort (args) {
+ 
+  const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+  for (let i = 0; i < list.length - 1; i++) {
+    const currentElement = list[i]
+    const nextElement = list[i+1]
+    if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+      // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
+      const tmp = list[i+1]
+      list[i+1] = list[i]
+      list[i] = tmp
+      i = 0 // starte von vorne wenn etwas vertauscht wurde.
+    }
+  }
+  const result = list.join("")
+  return (result)
+
+
+}
+
