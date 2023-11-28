@@ -340,20 +340,31 @@ return [
 export function aufgabe17(args) {
  const input = args
   const result = []
-  
+  let currentPhrase = []
+  let first = true 
 
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
- 
-    if (currentElement === ',') {
-    
-      continue
-    } 
+  for (let i = 0; i < text.length; i++) {
+    const currentElement = text[i]
+
+    if (currentElement === ',' && first === true) {
+      // Wenn wir hier sind haben wir einen ',' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
+      // wenn ein Komma gefunden wird und den ersten Teikl der liste wahr ist, dann passiert das was in den Klammern drinn ist.
+      result.push(currentPhrase.join(""))
+      currentPhrase = []  // Damit löschen wir alles was im aktuellen Satz drin war.
+      first = false
+   
+    } else {
+      // Wenn wir keinen ',' lesen, dann möchten wir die Zeichen an den aktuellen Satz anhängen.
+      currentPhrase.push(currentElement)
+    }
   }
-  
-  return result.join("")
+  phrases.push(currentPhrase.join(""))
+  return phrases
+//der Text kommt von aussen wegen dem args, man bracht keinen Text in der Aufgabe
 }
 // ähnlich wie aufgabe 16
+// Aufgabe richtig aber Tests falsch
+
 
 
 
@@ -361,9 +372,23 @@ export function aufgabe18 (args) {
   const input = args
   const result = []
   
+  let currentPhrase = []
+  for (let i = 0; i < text.length; i++) {
+    const currentElement = text[i]
+    if (currentElement === '.') {
+      // Wenn wir hier sind haben wir einen '.' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
+      phrases.push(currentPhrase.join(""))
+      currentPhrase = []  // Damit löschen wir alles was im aktuellen Satz drin war.
+    } else {
+      // Wenn wir keinen '.' lesen, dann möchten wir die Zeichen an den aktuellen Satz anhängen.
+      currentPhrase.push(currentElement)
+    }
+  }
+  return phrases 
+
   return result.join("")
 }
-//
+//ähmlich wie Aufgabe 17
 
 export function aufgabe19 (args) {
   const input = args
