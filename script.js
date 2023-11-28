@@ -354,7 +354,7 @@ export function aufgabe17(args) {
   return result.join("")
 }
 // ähnlich wie aufgabe 16
-// die eingabe soll so lange gelesen werdden bis ein komma kommt danach wird die eingabe getrennt
+
 
 
 export function aufgabe18 (args) {
@@ -363,7 +363,7 @@ export function aufgabe18 (args) {
   
   return result.join("")
 }
-
+//
 
 export function aufgabe19 (args) {
   const input = args
