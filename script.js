@@ -471,7 +471,8 @@ export function aufgabe25 (args) {
 
 export function aufgabe26 (args) {
   
-    const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+const text = args
+    const list = text.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
     // args anstatt text, weil wir keinen Text in der Aufgabe haben sondern der Text von aussen kommt desshalb auch kein const text
     
     for (let i = 0; i < list.length - 1; i++) {
@@ -545,11 +546,16 @@ export function bubbleSort (args) {
       const tmp = list[i+1]
       list[i+1] = list[i]
       list[i] = tmp
-      i = 0 // starte von vorne wenn etwas vertauscht wurde.
+      i = -1 // starte von vorne wenn etwas vertauscht wurde.
     }
   }
   const result = list.join("")
+  console.log(result)
+  
   return result
+
+
+
 
 
 }
