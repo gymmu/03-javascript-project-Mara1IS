@@ -446,6 +446,7 @@ export function aufgabe21 (args) {
 // ähnlich wie aufgabe 13
 
 
+
 export function aufgabe22 (args) {
   const input = args
   const result = []
