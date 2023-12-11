@@ -519,21 +519,7 @@ export function aufgabe27 (args) {
   return true
 }
 
-
-export function aufgabe28 (args) {
-  const input = args
-  const result = []
-  
-  return result.join("")
-}
-
-
-
-
-
-
-
-
+export function  aufgabe28 (args) 
 
 
 
