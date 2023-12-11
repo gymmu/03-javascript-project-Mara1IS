@@ -432,28 +432,18 @@ export function aufgabe20 (args) {
 
 
 export function aufgabe21 (args) {
-  
+  const input = args
+  const result = []
 
-  const list = args.split("")  
-  for (let i = 0; i < list.length - 1; i++) {
-    const currentElement = list[i]
-    const nextElement = list[i+1]
-    if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
-      
-      const tmp = list[i+1]
-      list[i+1] = list[i]
-      list[i] = tmp
-      i = -1 
-    }
+  let positionOfLastE = -1
+  // von aufgabe 13 kopiert zeigt wie man eine eingabe rückwerts liest.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[input.length - i - 1]
+    result.push(currentElement)
   }
-  const result = list.join("")
-  console.log(result)
-  
-  return result
-
+  return result.join("")
 }
-  
-// mit Bubblesort lösen 
+// ähnlich wie aufgabe 13
 
 
 export function aufgabe22 (args) {
