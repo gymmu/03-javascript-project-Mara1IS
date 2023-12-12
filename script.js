@@ -445,30 +445,30 @@ export function aufgabe21 (args) {
 }
 // ähnlich wie aufgabe 13
 
-
-
 export function aufgabe22 (args) {
- const input = args
-const result = []
-let firstPart = true
  
-for (let i = 0; i < input.length; i++) {
-  const currentElement = input[i]
- 
-  if (firstPart === true) {
-    result.push("_")
-  } else {
-    result.push(currentElement)
+  const input = args
+  const result = []
+  let firstPart = true
+   
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+   
+    if (firstPart === true) {
+      result.push("_")
+    } else {
+      result.push(currentElement)
+    }
+   
+   
+    if (currentElement === 'k') {
+      firstPart = false
+    }
+   
   }
- 
- 
-  if (currentElement === 'k') {
-    firstPart = false
+  return result.join("")
   }
- 
-}
-return result.join("")
-}
+
 // kombination von 1 & 
 
 export function aufgabe23 (args) {
