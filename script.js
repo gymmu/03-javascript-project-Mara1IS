@@ -616,7 +616,6 @@ export function  aufgabe28 (args) {
 // Bubble sort
 
 
-
 export function bubbleSort (args) {
  
   const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
@@ -635,10 +634,6 @@ export function bubbleSort (args) {
   console.log(result)
   
   return result
-
-
-
-
 
 }
 
