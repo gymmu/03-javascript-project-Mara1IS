@@ -338,7 +338,7 @@ return [
 
 
 export function aufgabe17(args) {
- const input = args
+ const input = args 
   const result = []
   let currentPhrase = []
   let first = true 
@@ -363,7 +363,7 @@ export function aufgabe17(args) {
 //der Text kommt von aussen wegen dem args, man bracht keinen Text in der Aufgabe
 }
 // ähnlich wie aufgabe 16
-// Aufgabe richtig aber Tests falsch
+// Aufgabe richtig aber Tests falsch hat herr Geissmann gesagt
 
 
 
