@@ -375,6 +375,7 @@ export function aufgabe18 (args) {
   let currentPhrase = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+
     if (currentElement === ' ') {
       // Wenn wir hier sind haben wir einen '.' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
       phrases.push(currentPhrase.join(""))
@@ -388,7 +389,6 @@ export function aufgabe18 (args) {
   phrases.push(currentPhrase.join(""))
   return "Sie heissen " + phrases[0] + " und sind " + phrases[1] + " Jahre alt"
 
-  
 }
 //ähmlich wie Aufgabe 17
 // letzte 2 Test zu schwer weil es spezial Fälle gibt.
@@ -473,7 +473,37 @@ export function aufgabe24 (args) {
 export function aufgabe25 (args) {
   const input = args
   const result = []
+  // das mittlere zeichen soll gelöscht werden
+ 
+if (input.length % 2 === 0 ) {
+// prüft ob Input.lenght gerade ist
+const pos = input.length / 2 -1
+ // brauchen -1 um auf die richtige position zu kommen weil man sonst ein zeichen zu weit währe
+
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
   
+if(i === pos || i === pos + 1) {
+
+} else {
+  result.push(currentElement)
+}
+}
+} else {
+
+ // Fall wenn es ungerade ist
+  const pos = Math.floor( input.length / 2)
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (i === pos) {
+    
+   } else {
+result.push(currentElement)
+
+  }
+}
+}
   return result.join("")
 }
 
