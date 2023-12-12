@@ -72,7 +72,7 @@ export function aufgabe04(args) {
 }
   return count
 }
-// letzter test mit ascii
+// letzter test mit ascii man muss es mehrfach filtern desshalb ist es schwer
 
 
 export function aufgabe05(args) {
@@ -456,11 +456,27 @@ export function aufgabe22 (args) {
 
 
 export function aufgabe23 (args) {
-  const input = args
-  const result = []
-  
-  return result.join("")
+  const input = args;
+  const result = [];
+
+  if (input.length === 0) {
+    return ''; // Soll leer zurückgeben
+  }
+
+  const firstChar = input.charAt(0);
+
+  result.push(firstChar); // Soll erstes Zeichen am Anfang der Ausgabe anhängen
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i];
+    result.push(currentElement);
+  }
+
+  result.push(firstChar); // Soll erstes Zeichen am Schluss der Ausgabe anhängen
+
+  return result.join('');
 }
+
 
 export function aufgabe24 (args) {
   const input = args
