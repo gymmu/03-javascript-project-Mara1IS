@@ -448,31 +448,47 @@ export function aufgabe21 (args) {
 
 
 export function aufgabe22 (args) {
-  const input = args
-  const result = []
-  
-  return result.join("")
+ const input = args
+const result = []
+let firstPart = true
+ 
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+ 
+  if (firstPart === true) {
+    result.push("_")
+  } else {
+    result.push(currentElement)
+  }
+ 
+ 
+  if (currentElement === 'k') {
+    firstPart = false
+  }
+ 
 }
-
+return result.join("")
+}
+// kombination von 1 & 
 
 export function aufgabe23 (args) {
   const input = args;
   const result = [];
 
   if (input.length === 0) {
-    return ''; // Soll leer zurückgeben
+    return ''; //die eingabe sollte leer zurück kommen
   }
 
   const firstChar = input.charAt(0);
 
-  result.push(firstChar); // Soll erstes Zeichen am Anfang der Ausgabe anhängen
+  result.push(firstChar); // das erstes Zeichen soll am anfang der eingabe angehangen werden
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i];
     result.push(currentElement);
   }
 
-  result.push(firstChar); // Soll erstes Zeichen am Schluss der Ausgabe anhängen
+  result.push(firstChar); // das erste zeichen sollte am ende der eingabe angehängt werdem.
 
   return result.join('');
 }
@@ -481,9 +497,21 @@ export function aufgabe23 (args) {
 export function aufgabe24 (args) {
   const input = args
   const result = []
-  
+ 
+  if (input.length === 1) return input
+  const firstElem=input[0]
+  const lastElem=input[input.length-1]
+ 
+  result.push(lastElem)
+  for (let i = 1; i < input.length -1; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+ 
+result.push(firstElem)
   return result.join("")
 }
+//ähnlich  wie aufgabe 21 man muss das 1. und letze zeichen umkehrern
 
 
 export function aufgabe25 (args) {
