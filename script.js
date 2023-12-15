@@ -5,10 +5,11 @@ export function aufgabe01(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
  
+    // Wenn das jetzige Element ein kleines "e" oder ein grosses "E" ist, wird es ersetzt durch " " (z.B: eingabe --> ingabe) 
     if (currentElement === 'e') {
-      result.push("")
+      result.push("") 
     } else if ( currentElement === 'E') {
-      result.push("")
+      result.push("") 
  
   } else {
   result.push(currentElement)
@@ -16,7 +17,7 @@ export function aufgabe01(args) {
 }
   return result.join("")
 }
- 
+ // Diese Funktin testet, ob es in der Eingabe ein kleines "e" oder ein grosses "E" hat, und löscht diese.
  
  
  
@@ -44,6 +45,7 @@ export function aufgabe03(args) {
   const result = []
   let count = 0
  
+  // Zählt in der Eingabe alle "e" & "E"
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === 'e') {
@@ -55,7 +57,7 @@ export function aufgabe03(args) {
  
   }
   return count
-}
+} 
 
 export function aufgabe04(args) {
   const input = args
@@ -67,12 +69,13 @@ export function aufgabe04(args) {
     if (currentElement === ' ') {
       count++
     }
- //ähnlich wie Aufgabe 3 es sollte anstatt e s wörter zählen
+ 
+// Ähnlich wie bei Aufgabe 3 sollten anstatt "e" die Wörter gezählt werden. Die Funktion zählt die Wörter.
  
 }
   return count
 }
-// letzter test mit ascii man muss es mehrfach filtern desshalb ist es schwer
+// Letzter Test mit ascii man muss es mehrfach filtern desshalb ist es schwer.
 
 
 export function aufgabe05(args) {
@@ -83,16 +86,16 @@ export function aufgabe05(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    //ähnlich wie aufgabe 2, die aufgabe soll grossbuchstaben enthalten
+    // Ähnlich wie Aufgabe 2, die Aufgabe soll Grossbuchstaben enthalten.
     const ascii = currentElement.charCodeAt(0)
    
     if (65 <= ascii && ascii <= 90) {
       return true
-
+      // Wenn ein Grossbuchstabe gefunden wird (ascii) wird es richtig.
     } 
   }
   return false
-}
+} // Falls ein Grossbuchstabe vorkommt ist es falsch.
 
 
 export function aufgabe06 (args) {
@@ -110,14 +113,11 @@ const asciiCode = currentElement.charCodeAt (0)
     || asciiCode >= 91 && asciiCode <= 96 || asciiCode >= 123)
 ) {
 return true
-}
-
+} // Mit ascii werden die Sonderzeichen gelesen.
   }
-  
-  
   return result.join("")
 }
-// ähnlich wie aufgabe 10 und 5
+// Ähnlich wie aufgabe 10 und 5. Mit ascii werden Sonderzeichen getesetet.
 
 
 export function  aufgabe07 (args) {
@@ -126,7 +126,7 @@ export function  aufgabe07 (args) {
 
   for(let i =0; i < input.length; i++) {
     const currentElement = input[i] 
-
+   // Beim Buchstaben u geht es eines weiter zu n und danach zu d somit kann das Wort "und" gelesen werden
     if (currentElement === "u") {
       if (input[i+1] === "n")  {
       if (input[i+2] === "d") {
@@ -138,7 +138,7 @@ export function  aufgabe07 (args) {
 }
 return false
 }
-// ähnlich wie Aufgabe 20 letzter Test ist falsch
+// Ähnlich wie Aufgabe 20 letzter Test ist falsch
 
 
 
@@ -150,9 +150,9 @@ export function aufgabe08(args) {
     const currentElement = input[i]
  
     if (currentElement === 'e') {
-      result.push("3")
+      result.push("3") // Wenn das jetzige Element ein "e" ist wird es mit einem 3 ersetzt.
     } else if ( currentElement === 'E') {
-      result.push("E")
+      result.push("E") // Bei einem grossen "E" bleibt es ein grosses E.
  
   } else {
   result.push(currentElement)
@@ -160,7 +160,7 @@ export function aufgabe08(args) {
 }
   return result.join("")
 }
-//currentElement ist der Buchstabe der gerade an dr "Reihe" ist also das Jetzige element durch resent push zeigt man dem computer durch was er das jetzige element ersetzten soll. (Aufgabe 8 ähnelt Aufgabe 1)
+// CurrentElement ist der Buchstabe der gerade an der "Reihe" ist also das jetzige Element durch resent.push zeigt man dem Computer durch was er das jetzige Element ersetzten soll. (Aufgabe 8 ähnelt Aufgabe 1)
 
 
 
@@ -176,7 +176,7 @@ export function aufgabe08(args) {
       len = len + 1
    
     }
-  
+  // Wenn len 6 ist dann ist es richtig,die Funktion testet, ob es genau 6 Wörter in der Eingabe sind.
   if( len === 6 ) {
     return true
   } else {
@@ -200,11 +200,8 @@ export function aufgabe08(args) {
     } else {
       return false
     }
-
   }
-
   return true
-
 }
 
 
@@ -213,20 +210,19 @@ export function aufgabe08(args) {
     const input = args
     let ascii = null
 
+    // Nimmt nur das erste Zeichen der Eingabe
     if (input.length > 1){ //funktionswächter
-   
-    return null
+      return null
     }
-
     
-    
+    // Gibt den ersten Wert als ASCII Code zurück
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
       ascii = currentElement.charCodeAt (0)
       return ascii
     }
-      return null
-    }
+    return null
+  }
   
   
   
@@ -241,7 +237,7 @@ export function aufgabe08(args) {
       }
     }
     return -1
-  }
+  } // Geht den Text durch sobald es ein "e" findet gibt es zurück uf welcher Position das "e" ist.
   
 
   export function aufgabe13 (args) {
@@ -280,7 +276,7 @@ export function aufgabe14 (args) {
     }
     return -1
   }
-    
+    // Dasselbe wie bei Aufgabe 13 nur, dass es 3 mal gezählt wird bis die Funktion die Position zurück gibt somit wird das dritte "e" zurück gegeben.
 
 //aufgabe 3 & 12 bei 3 zählt man die es und bei 12 sucht man die Position zusammen kann man die das dritte 3 zählen
 let count = input
@@ -305,7 +301,8 @@ export function aufgabe15 (args) {
 }
   return result.join("")
 }
-// aufgabe 1 und 8 Aufgabe ist richtig aber letzter test falsch
+// Nach dem ersten Leerzeichen stoppt der Computer die Eingabe zu lesen ( return result.join(" "))
+// Aufgabe 1 und 8 Aufgabe ist richtig aber letzter Test falsch.
 
 
 export function aufgabe16 (args) {
@@ -316,25 +313,28 @@ export function aufgabe16 (args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
- 
+     
+    // Wenn das jetzige Element ein "$" ist, sollte der erste Teil der Liste falsch sein und die Lise soll weiter gelesen werden. 
+    // Alles bis zum "$" ist True, alles ab dem "$" ist false somit ist alles davor der erste Teil der Liste welcher jedoch ab dem $ abbricht und alles danach der zweite Teil.
     if (currentElement === '$') {
       firstPart = false
       continue
     } 
 
+    // Wenn der erste Teil der Liste wahr ist,
     if (firstPart === true) {
       result.push(currentElement)
     } else {
       result2.push(currentElement)
     }
    
-  }
+  } 
 return [
   result.join(""),
   result2.join("")
   ]
 }
-// ähnlich wie aufgabe 15, man braucht noch eine liste (Aufgabe ist richtig aber Test ist Falsch)
+// Ähnlich wie aufgabe 15, man braucht noch eine liste (Aufgabe ist richtig aber Test ist Falsch)
 
 
 export function aufgabe17(args) {
@@ -360,10 +360,10 @@ export function aufgabe17(args) {
   }
   result.push(currentPhrase.join(""))
   return result
-//der Text kommt von aussen wegen dem args, man bracht keinen Text in der Aufgabe
+// Der Text kommt von aussen wegen dem args, man bracht keinen Text in der Aufgabe
 }
-// ähnlich wie aufgabe 16
-// Aufgabe richtig aber Tests falsch hat herr Geissmann gesagt
+// Ähnlich wie aufgabe 16
+// Aufgabe richtig aber Tests falsch hat Herr Geissmann gesagt.
 
 
 
@@ -390,8 +390,8 @@ export function aufgabe18 (args) {
   return "Sie heissen " + phrases[0] + " und sind " + phrases[1] + " Jahre alt"
 
 }
-//ähmlich wie Aufgabe 17
-// letzte 2 Test zu schwer weil es spezial Fälle gibt.
+// Ähnlich wie Aufgabe 17
+// Letzte 2 Test zu schwer weil es spezial Fälle gibt.
 
 
 
@@ -399,9 +399,10 @@ export function aufgabe19 (args) {
   const input = args
   const result = []
 
+  // i++ heisst es wird immer eine Zahl dazu getan. Jedes Zeichen wird doppelt in das Resultat gepusht.
   for (let i = 0; i < input.length; i++) {
     const currentElement = input [i]
-    result.push(currentElement)
+    result.push(currentElement) 
     result.push(currentElement)
   }
   
@@ -418,6 +419,7 @@ export function aufgabe20 (args) {
   for(let i =0; i < input.length; i++) {
     const currentElement = input[i] 
 
+    // Nach dem "." wird ein Platz weiter gezählt und getestet, ob das nächste Zeichen " " ist.
     if (currentElement === ".") {
       if (input[i+1] === " ")  {
         return true
@@ -428,7 +430,7 @@ export function aufgabe20 (args) {
 }
   return false
 }
-//ähnlich wie 7 einfach mit "." statt "und"
+// Ähnlich wie 7 einfach mit "." statt "und"
 
 
 export function aufgabe21 (args) {
@@ -436,14 +438,14 @@ export function aufgabe21 (args) {
   const result = []
 
   let positionOfLastE = -1
-  // von aufgabe 13 kopiert zeigt wie man eine eingabe rückwerts liest.
+  // Von aufgabe 13 kopiert zeigt wie man eine eingabe rückwerts liest.
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[input.length - i - 1]
     result.push(currentElement)
   }
   return result.join("")
 }
-// ähnlich wie aufgabe 13
+// Ähnlich wie aufgabe 13.
 
 export function aufgabe22 (args) {
  
@@ -454,6 +456,7 @@ export function aufgabe22 (args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
    
+    // Jedes Zeichen wird durch "_" ersetzt (firstPart = true), sobald der Buchstabe "K" kommt ( firstPart= false ).
     if (firstPart === true) {
       result.push("_")
     } else {
@@ -469,27 +472,26 @@ export function aufgabe22 (args) {
   return result.join("")
   }
 
-// kombination von 1 & 
 
 export function aufgabe23 (args) {
   const input = args;
   const result = [];
 
   if (input.length === 0) {
-    return ''; //die eingabe sollte leer zurück kommen
+    return ''; // Die eingabe sollte leer zurück kommen.
   }
 
   const firstChar = input.charAt(0);
 
-  result.push(firstChar); // das erstes Zeichen soll am anfang der eingabe angehangen werden
+  result.push(firstChar); // Das erstes Zeichen soll am Anfang der Eingabe angehangen werden.
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i];
     result.push(currentElement);
   }
 
-  result.push(firstChar); // das erste zeichen sollte am ende der eingabe angehängt werdem.
-
+// Das erste zeichen sollte am Ende der eingabe angehängt werdem.
+  result.push(firstChar); 
   return result.join('');
 }
 
@@ -498,26 +500,33 @@ export function aufgabe24 (args) {
   const input = args
   const result = []
  
+  // Wenn es nur ein Zeichen gibt wird es direkt zurück gegeben.
   if (input.length === 1) return input
+
+ // Das erste und letzte Element werden in 'firstElem' und 'lastElem' gespeichert.
   const firstElem=input[0]
   const lastElem=input[input.length-1]
  
+  // Als erstes wird das letzte Element in das Resultat gepusht.
   result.push(lastElem)
+
+  // Die nächsten Zeichen werden in das Resultat gepusht.
   for (let i = 1; i < input.length -1; i++) {
     const currentElement = input[i]
     result.push(currentElement)
   }
  
+  // Als letztes wird das erste Element in das Resultat gepusht.
 result.push(firstElem)
   return result.join("")
 }
-//ähnlich  wie aufgabe 21 man muss das 1. und letze zeichen umkehrern
+// Ähnlich wie Aufgabe 21 man muss das 1. und letze Zeichen umkehrern.
 
 
 export function aufgabe25 (args) {
   const input = args
   const result = []
-  // das mittlere zeichen soll gelöscht werden
+  // Das mittlere zeichen soll gelöscht werden
  
 if (input.length % 2 === 0 ) {
 // prüft ob Input.lenght gerade ist
@@ -555,7 +564,7 @@ export function aufgabe26 (args) {
   
 const text = args
     const list = text.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
-    // args anstatt text, weil wir keinen Text in der Aufgabe haben sondern der Text von aussen kommt desshalb auch kein const text
+    // Args anstatt Text, weil wir keinen Text in der Aufgabe haben sondern der Text von aussen kommt desshalb auch kein const Text.
     
     for (let i = 0; i < list.length - 1; i++) {
       const currentElement = list[i]
@@ -565,7 +574,7 @@ const text = args
         const tmp = list[i+1]
         list[i+1] = list[i]
         list[i] = tmp
-        i = 0 // starte von vorne wenn etwas vertauscht wurde.
+        i = 0 // Starte von vorne wenn etwas vertauscht wurde.
       }
     }
     const result = list.join("")
@@ -582,10 +591,16 @@ export function aufgabe27 (args) {
  
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+
+    // Element wird umgewandelt in CharCodeAt.
     const ascii = currentElement.charCodeAt (0)
+
+    // Ist die Eingabe ascii zwischen 48 und 57 ist sie eine Zahl.
     if(48 <= ascii && ascii <= 57) {
-      // mache nichts; ist eine Zahl
+      // Mache nichts; ist eine Zahl.
     } else {
+
+      // Falls nicht zwischen 48 und 57 ist das Element keine Zahl.
       return false
     }
  
@@ -595,12 +610,18 @@ export function aufgabe27 (args) {
 
 export function  aufgabe28 (args) {
   const input = args
+
+// Die Eingabe wird mit einem Leerzeichen geteilt, so dass die Zahlen getrennt werden.
   const zahlen = input.split(' ')
- 
+
+ // Sind genau zwei Elemente die beide Zahlen sind in der Eingabe?
   if (zahlen.length === 2 && !isNaN(zahlen[0]) && !isNaN(zahlen[1])) {
+
+    // Wenn es zustimmt, werden die beiden Zahlen in 'zahl1' und 'zahl2' umgewandelt.
     const zahl1 = parseFloat(zahlen[0]);
     const zahl2 = parseFloat(zahlen[1]);
    
+    // Die beiden Zahlen werden berechnet.
     const summe = zahl1 + zahl2;
     return `${summe}`;
 } else {
@@ -627,7 +648,7 @@ export function bubbleSort (args) {
       const tmp = list[i+1]
       list[i+1] = list[i]
       list[i] = tmp
-      i = -1 // starte von vorne wenn etwas vertauscht wurde.
+      i = -1 // Starte von vorne wenn etwas vertauscht wurde.
     }
   }
   const result = list.join("")
@@ -637,4 +658,4 @@ export function bubbleSort (args) {
 
 }
 
-// die ersten Buchstaben sind nicht richtig sortiert
+// Die ersten Buchstaben sind nicht richtig sortiert
